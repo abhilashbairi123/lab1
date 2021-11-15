@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 style="text-align:center;">Registration Form</h1>
+<br>
+<hr width=50%>
+<br>
+
+<div style=" display: flex;justify-content: center;align-items: center; " id="forms">
+
+<form>
+<label for="fname"> First Name :</label>
+<input type="text" id="fname" name="fname" value=""  placeholder="Enter ur First-name" required>
+<span class="valdity" style="float:right"></span>
+<br>
+<br>
+<label for="lname">Last Name :</label>
+<input type="text" id="lname" name="lname value="" placeholder="Enter ur Last-name" required>
+<span class="valdity" style="float:right"></span>
+<br>
+<br>
+<label for="phone" style="margin-left:-10%">Phone number :</label>
+<input type="tel" id="phone" name="phone"  value="" placeholder="123-456-7890"  maxlength="12" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  >
+<span class="valdity" style="float:right"></span>
+<br>
+<br>
+
+<label for="mail" style="margin-left:15%">Email :</label>
+<input type="email" id="mail" name="mail"value="" placeholder="me@hotmail.com" max-length="30" required >
+<span class="valdity" style="float:right"></span>
+<br>
+<br>
+<input type="submit" onclick="form_submit()" id="submit">
+</form>
+</div>
+<div>
+
+</div>
+</body>
+<script>
+function form_submit(){
+x=document.getElementById("fname").value;
+x1=document.getElementById("lname").value;
+x2=document.getElementById("phone").value;
+x3=document.getElementById("mail").value;
+if(x=="" && x1=="" && x2=="" && x3=="")
+{
+alert("please fill the details");
+}
+else
+{
+alert("your name is "+x +"\n"+"your lastname is "+x1+"\n"+"your phone number is "+x2+"\n"+"your mail is "+x3 );
+console.log(x+"\n"+x1+"\n"+x2+"\n"+x3);
+}
+}
+</script>
+</html>
